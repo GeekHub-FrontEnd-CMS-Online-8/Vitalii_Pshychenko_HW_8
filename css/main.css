@@ -1,0 +1,682 @@
+
+
+
+/*--------------*************************ЕЩЕ НЕ СДЕЛАЛ РЕСПОНСИВ------------------*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:16px "BrandonGrotesque", sans-serif; background:#fff; color:#5a5a5a; }
+div,menu,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,legend,label,select,input,textarea,button {
+    padding:0;
+    margin:0;
+    outline:none;
+    list-style:none;
+}
+button                         { cursor: pointer; padding: 0 }
+select, input, textarea,button { font:12px Tahoma, sans-serif; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+img                            { vertical-align: top; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a                              { text-decoration: none; color: inherit}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BrandonGrotesque-Light";
+    src: url('../fonts/BrandonGrotesque-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "BrandonGrotesque";
+    src: url('../fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+}
+
+
+.wrapper {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url("../img/header_bg.png") center no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+}
+
+.nav_item {
+    margin-right: 25px;
+}
+
+.menu {
+    display: none;
+    height: 35px;
+    width: 45px;
+    position: relative;
+}
+
+.menu span {
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu span:nth-child(1) {
+    top: 0;
+}
+
+.menu span:nth-child(1),.menu span:nth-child(2) {
+    top: 13px;
+}
+
+.menu span:nth-child(1) {
+    top:26px;
+}
+
+
+
+.welcome {
+    text-align: center;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome_1 {
+    font: 300 32px "BrandonGrotesque-Light";
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+}
+
+.welcome_2 {
+    font: 700 66px "BrandonGrotesque";
+    text-transform: uppercase;
+    letter-spacing: -1.65px;
+    margin-bottom: 30px;
+}
+
+.learn_btn {
+    border: 2px solid #fff;
+    padding: 10px;
+    width: 240px;
+    font-size: 23px;
+}
+
+.learn_btn:hover {
+    background-color: #fff;
+    transition: .2s ease-in-out;
+    color: #222;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);;
+}
+
+.web_dev {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.dev_wrap {
+    display: flex;
+    justify-content: space-between;
+    color: #777777;
+    font: 400 18px "BrandonGrotesque";
+    letter-spacing: -0.45px;
+}
+
+.dev_content {
+    width: 65%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.black_title {
+    font: 700 60px "BrandonGrotesque";
+    letter-spacing: -1.5px;
+    color: #222;
+    margin-bottom: -10px;
+}
+
+.light {
+    font: 300 60px "BrandonGrotesque-Light";
+}
+
+.dev_img {
+    background: url("../img/Flow_Tree-Icon.png") center no-repeat;
+    background-size: cover;
+    height: 222px;
+    width: 221px;
+    align-self: center;
+}
+
+.ident {
+    background-color: #fafafa;
+    padding: 80px 0;
+}
+
+
+.ident_img {
+    background: url("../img/Users-Icon.png") center no-repeat;
+    background-size: cover;
+    height: 197px;
+    width: 272px;
+    align-self: center;
+}
+
+.ident_content {
+    width: 60%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.services {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.services_list {
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.services_title {
+    display: none;
+}
+
+.services_item {
+    height: 102px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services_icon {
+    display: block;
+    width: 72px;
+    height: 71px;
+    background-color: #222;
+    border-radius: 50%;
+}
+
+.services_name {
+    width: 284px;
+}
+
+h4 {
+    color: #222;
+    font: 700 22px "BrandonGrotesque";
+    letter-spacing: -0.55px;
+}
+
+.services_description {
+    color: #777;
+    font: 400 18px "BrandonGrotesque";
+    letter-spacing: -0.45px;
+}
+
+.brand {
+    background: #222 url("../img/Person-Icon.png") center no-repeat;
+}
+
+.web {
+    background: #222 url("../img/Browser-Icon.png") center no-repeat;
+}
+
+.ipad {
+    background: #222 url("../img/iPad-Icon.png") center no-repeat;
+}
+
+.video {
+    background: #222 url("../img/Video-Icon.png") center no-repeat;
+}
+
+.star {
+    background: #222 url("../img/Star-Icon.png") center no-repeat;
+}
+
+.camera {
+    background: #222 url("../img/Camera.png") center no-repeat;
+}
+
+
+.clients {
+    background-color: #fafafa;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.grey_descrip {
+    color: #777;
+    font: 400 22px "BrandonGrotesque";
+    letter-spacing: -0.55px;
+}
+
+.blockquote_wrap {
+    display: flex;
+    margin: 60px 0 40px;
+}
+
+.blockquote_wrap:nth-child(2n) {
+    margin-bottom: 100px;
+}
+
+blockquote {
+    padding: 35px 70px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    width: 70%;
+    text-align: left;
+    position: relative;
+}
+
+.block:before, .block:after  {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right: 20px solid #e8e8e8;
+}
+
+.block:after {
+    border-right: 20px solid #fff;
+    left: -28px;
+}
+
+.blok_reverse {
+    position: relative;
+}
+
+.blok_reverse:before, .blok_reverse:after  {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-left: 20px solid #e8e8e8;
+}
+
+.blok_reverse:after {
+    border-left: 20px solid #fff;
+    right: -28px;
+}
+
+
+blockquote p {
+    color: #777777;
+    font: 400 26px "BrandonGrotesque";
+    letter-spacing: -0.65px;
+    line-height: 28px;
+}
+
+cite {
+    color: #7690c5;
+    font: 400 20px "BrandonGrotesque";
+    letter-spacing: -0.5px;
+    line-height: 36px;
+}
+
+
+
+.white_box {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.clients_list {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.team {
+    background-color: #111;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.white_text {
+    color: #fff;
+}
+
+
+
+.team_list {
+    width: 90%;
+    margin: 70px auto 50px ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-item {
+    width: 30%;
+}
+
+
+.photo_wrap {
+    display: inline-block;
+    width: 220px;
+    height: 221px;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    background-color: #111;
+    margin-bottom: 10px;
+}
+
+.photo_wrap img {
+    width: 100%;
+    height: auto;
+}
+
+.name {
+    color: #fff;
+    font: 700 18px "BrandonGrotesque";
+    letter-spacing: -0.45px;
+}
+
+.position {
+    color: #ebebeb;
+    font: 700 16px "BrandonGrotesque-Light";
+    letter-spacing: -0.4px;
+}
+
+
+.network_list {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.network_item {
+    width: 41px;
+    height: 41px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-color: #111;
+    margin: 0 5px;
+}
+
+.network_item:hover {
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.network_item a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+
+.tw {
+    background: #111 url("../img/tw.png") center no-repeat;
+}
+
+.tw:hover {
+    background-color: #00aced;
+}
+
+.fb {
+    background: #111 url("../img/fb.png") center no-repeat;
+}
+
+.fb:hover {
+    background-color: #3b5998;
+}
+
+.pin {
+    background: #111 url("../img/Pin.png") center no-repeat;
+}
+
+.pin:hover {
+    background-color: #cb2028;
+}
+
+.goo {
+    background: #111 url("../img/goo.png") center no-repeat;
+}
+
+.goo:hover {
+    background-color: #d95232;
+}
+
+.team_text {
+    max-width: 590px;
+    width: 100%;
+    color: #ebebeb;
+    font: 400 20px "BrandonGrotesque-Light";
+    letter-spacing: -0.5px;
+    display: inline-block;
+}
+
+
+footer {
+    background-color: #7690c5;
+    padding: 100px 0 30px;
+    text-align: center;
+}
+
+.contact {
+    width: 47%;
+    color: #fff;
+}
+
+.contact p {
+    font: 400 18px "BrandonGrotesque";
+    letter-spacing: -0.45px;
+    margin: 15px 0 40px;
+}
+
+.contact_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact_item {
+    color: #fff;
+    width: 48%;
+    margin-bottom: 25px;
+}
+
+.phone {
+    line-height: 29px;
+}
+
+.phone:before {
+    content: url("#");
+    background: url("../img/phone.png") center no-repeat;
+    display: inline-block;
+    height: 29px;
+    width: 18px;
+    margin-right: 20px;
+}
+
+.twit {
+    line-height: 22px;
+}
+
+.twit:before {
+    content: url("#");
+    background: url("../img/tw.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 22px;
+    width: 28px;
+    margin-right: 10px;
+}
+
+.mail {
+    line-height: 18px;
+}
+
+.mail:before {
+    content: url("#");
+    background: url("../img/mail.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 18px;
+    width: 27px;
+    margin-right: 11px;
+}
+
+.facebook {
+    line-height: 27px;
+}
+
+.facebook:before {
+    content: url("#");
+    background: url("../img/fb.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 16px;
+    height: 27px;
+    margin-right: 23px;
+}
+
+.gmail {
+    line-height: 27px;
+}
+
+.gmail:before {
+    content: url("#");
+    background: url("../img/goo.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 28px;
+    height: 27px;
+    margin-right: 12px;
+}
+
+.pinterest {
+    line-height: 31px;
+}
+
+.pinterest:before {
+    content: url("#");
+    background: url("../img/Pin.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 24px;
+    height: 31px;
+    margin-right: 16px;
+}
+
+
+
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+
+
+.form {
+    height:400px;
+    width: 47%;
+    margin-top: 20px;
+}
+
+.form_item,textarea {
+    width:100%;
+    padding: 16px 20px;
+    margin-bottom:20px;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    color: #bbb;
+    font: 500 18px "BrandonGrotesque";
+}
+
+input::-webkit-input-placeholder { color: #bbb; font: 500 18px "BrandonGrotesque";}
+input::-moz-placeholder { color: #bbb; font: 500 18px "BrandonGrotesque";}
+
+textarea::-webkit-input-placeholder { color: #bbb; font: 500 18px "BrandonGrotesque";}
+textarea::-moz-placeholder { color: #bbb; font: 500 18px "BrandonGrotesque";}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.stripe {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #87a0d2;
+    margin: 70px 0 20px;
+}
+
+address {
+    color: #fff;
+    font: 500 16px "BrandonGrotesque";
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: inline-block;
+    }
+
+    .nav_list {
+        position: fixed;
+        display: none;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 70px;
+        z-index: 1000;
+
+    }
+}
+
+
+
+
+
+
+
